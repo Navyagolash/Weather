@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url("https://png.pngtree.com/background/20220716/original/pngtree-cartoon-black-atmospheric-weather-forecast-illustration-background-picture-image_1640761.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box input {
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px;
+    border: none;
+    background: rgb(14, 168, 14);
+    color: white;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    width: 120px;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: rgb(1, 139, 1);
+}
+
+/* Weather card */
+.weather-card {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Sections */
+.card-top,
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temp {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* 🌤️ Weather backgrounds */
+.sunny-card {
+    background-image: url("https://c8.alamy.com/comp/2RFFKHT/cloud-and-smilin…s-on-sky-joyful-summer-season-weather-2RFFKHT.jpg");
+}
+
+.cloudy-card {
+    background-image: url("https://img.freepik.com/premium-vector/sad-sun-hid…-illustration-flat-cartoon-style_198278-11695.jpg");
+}
+
+.rainy-card {
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/04/00/rain-1869741_1280.jpg");
+}
+
+.snowy-card {
+    background-image: url("https://img.freepik.com/premium-vector/happy-snowm…-weather-illustration-flat-design_189483-2086.jpg");
+}
+
+.storm-card {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/022/208/694/large_2x/image-of-stormy-weather-with-rain-and-lightning-isolated-on-transparent-background-vector.jpg");
+}
+
+.foggy-card {
+    background-image: url("https://grammaticus.blog/wp-content/uploads/2022/11/foggy-morning-street.jpg?w=1600&h=1040&crop=1");
+}
+
+.default-card {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/849/560/large_2x/clear-blue-sky-background-free-vector.jpg");
+}
+
+/* 🌍 Responsive design */
+@media (max-width: 768px) {
+    .search-box {
+        /* flex-direction: column;
+        gap: 10px; */
+        align-items: center;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+        /* border-radius: 8px; */
+        font-size: 14px;
+    }
+
+    .weather-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .temp {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 15px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .search-box button {
+        font-size: 14px;
+        padding: 12px;
+        width: 43%;
+    }
+
+    .weather-card {
+        padding: 12px;
+    }
+
+    .temp {
+        font-size: 26px;
+    }
+}
+
+/* Forecast container */
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
