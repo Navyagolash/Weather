@@ -9,7 +9,6 @@ function WeatherApp() {
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState([]);
 
-  // Fetch current weather
   const fetchWeather = async (cityName) => {
     try {
       const res = await axios.get(
@@ -21,13 +20,11 @@ function WeatherApp() {
     }
   };
 
-  // Fetch 5-day forecast
   const fetchForecast = async (cityName) => {
     try {
       const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=metric`
       );
-      // pick one forecast per day (e.g., 12:00 PM)
       const daily = res.data.list.filter((item) =>
         item.dt_txt.includes("12:00:00")
       );
@@ -37,14 +34,12 @@ function WeatherApp() {
     }
   };
 
-  // Search button
   const handleSearch = () => {
     if (!city) return;
     fetchWeather(city);
     fetchForecast(city);
   };
 
-  // Live location weather
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
@@ -64,7 +59,6 @@ function WeatherApp() {
     );
   }, []);
 
-  // Background card classes
   const getCardClass = () => {
     if (!weather) return "default-card";
     const condition = weather.weather[0].main.toLowerCase();
@@ -81,7 +75,6 @@ function WeatherApp() {
 
   return (
     <div className="app">
-      {/* 🔍 Search */}
       <div className="search-box">
         <input
           type="text"
@@ -92,7 +85,6 @@ function WeatherApp() {
         <button onClick={handleSearch}>Search</button>
       </div>
 
-      {/* 🌤 Current Weather */}
       {weather && (
         <div className={`weather-card ${getCardClass()}`}>
           <div className="card-top">
@@ -118,7 +110,7 @@ function WeatherApp() {
         </div>
       )}
 
-      {/* 📅 5-Day Forecast */}
+     
       {forecast.length > 0 && (
         <div className="forecast-container">
           {forecast.map((day, index) => (

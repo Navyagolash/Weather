@@ -16,7 +16,6 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-/* Search */
 .search-box {
     display: flex;
     margin-bottom: 20px;
@@ -49,7 +48,6 @@
     background: rgb(1, 139, 1);
 }
 
-/* Weather card */
 .weather-card {
     width: 100%;
     max-width: 350px;
@@ -65,7 +63,6 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Sections */
 .card-top,
 .card-bottom {
     display: flex;
@@ -84,7 +81,6 @@
     font-weight: bold;
 }
 
-/* 🌤️ Weather backgrounds */
 .sunny-card {
     background-image: url("https://c8.alamy.com/comp/2RFFKHT/cloud-and-smilin…s-on-sky-joyful-summer-season-weather-2RFFKHT.jpg");
 }
@@ -113,11 +109,9 @@
     background-image: url("https://static.vecteezy.com/system/resources/previews/001/849/560/large_2x/clear-blue-sky-background-free-vector.jpg");
 }
 
-/* 🌍 Responsive design */
 @media (max-width: 768px) {
     .search-box {
-        /* flex-direction: column;
-        gap: 10px; */
+        gap: 10px; 
         align-items: center;
     }
 
@@ -163,7 +157,6 @@
     }
 }
 
-/* Forecast container */
 .forecast-container {
     display: flex;
     justify-content: center;
