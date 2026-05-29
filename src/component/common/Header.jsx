@@ -76,7 +76,7 @@ function Header() {
           />
         </svg>
         <span className="inline-flex items-center text-sm font-medium text-body-subtle">
-          Flowbite
+          Wheather app
         </span>
       </div>
     </li>
