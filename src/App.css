@@ -165,10 +165,21 @@
     flex-wrap: wrap;
 }
 
-.forecast-card {
+/* .forecast-card {
     background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 12px;
+    text-align: center;
+    width: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} */
+
+
+
+.forecast-card{
+    background: rgba(69, 54, 54, 0.2);
+    padding: 10px;
+    border-radius: 14px;
     text-align: center;
     width: 80px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
